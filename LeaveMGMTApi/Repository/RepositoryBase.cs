@@ -1,6 +1,7 @@
 ﻿using LeaveMGMTApi.Data;
 using LeaveMGMTApi.Interfaces;
 using LeaveMGMTApi.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace LeaveMGMTApi.Repository
@@ -15,8 +16,8 @@ namespace LeaveMGMTApi.Repository
 
         public async Task<List<Users>> Users()
         {
-            List<Users> employees = await _context.Users.ToListAsync();
-            return employees;
+            List<Users> users = await _context.Users.ToListAsync();
+            return users;
 
         }
     }

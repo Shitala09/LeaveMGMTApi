@@ -63,7 +63,7 @@ namespace LeaveMGMTApi.Data
 
             modelBuilder.Entity<LeaveRequest>(entity =>
             {
-                entity.ToTable("LeaveRequests"); // Specify table name
+                entity.ToTable("LeaveRequests"); 
                 entity.HasKey(lr => lr.Id);
                 entity.Property(lr => lr.StartDate).IsRequired();
                 entity.Property(lr => lr.EndDate).IsRequired();
